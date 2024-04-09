@@ -1,0 +1,50 @@
+.LeadsPanel {
+  position: fixed; /* Stick panel to the side of the screen */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 30%; /* Adjust width as needed */
+  max-width: 300px; /* Prevents the panel from being too wide on larger devices */
+  background-color: white; /* Background color */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5); /* Shadow for a "lifted" effect */
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Start off-screen */
+  z-index: 8000; /* Ensure it's above other content */
+  padding: 10px;
+}
+
+.LeadsPanel.open {
+  transform: translateX(0); /* Slide in */
+}
+.filter-bar {
+
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  .LeadsPanel {
+    position: static; /* Normal document flow on larger screens */
+    max-width: 100%; /* Allows panel to take up the necessary width */
+    transform: none; /* No transformation needed */
+  }
+}
+
+.lead-details {
+  display: none; /* Keep your existing hide/show functionality */
+  padding: 10px; /* Adds space inside the borders */
+  margin-top: 5px; /* Gives a little space between the title and details */
+  background-color: #f9f9f9; /* A light background to highlight the area */
+  border: 1px solid #ddd; /* A subtle border */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  border-radius: 5px; /* Optional: Rounds the corners for a softer look */
+  margin-left: 10px; /* Or any appropriate value */
+}
+
+.lead-item.selected::after {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: #007bff; /* Or a color that matches your design */
+  display: block;
+  margin: auto; /* This centers the line if your items are flex or grid items */
+}

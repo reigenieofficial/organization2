@@ -1,0 +1,65 @@
+/* Add this to your CSS file */
+
+.ChatContainer {
+    position: sticky;
+    top: 0;
+    z-index: 8001;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    height: 100%; /* Set the height to 100% */
+    max-height: 800px;
+    overflow-y: scroll;
+    width: 70%;
+ 
+  }
+
+/* Styling for chat message */
+.chat-message {
+  margin-bottom: 10px;
+}
+
+/* Styling for Bot messages */
+.bot-balloon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+.bot-balloon p {
+  font-size: 12px;
+  margin-bottom: 2px;
+  color: #888;
+}
+
+.bot-balloon .message {
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 70%;
+}
+
+/* Styling for Lead messages */
+.lead-balloon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 20px;
+}
+
+.lead-balloon p {
+  font-size: 12px;
+  margin-bottom: 2px;
+  color: #888;
+}
+
+.lead-balloon .message {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 70%;
+}

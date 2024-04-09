@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "react-jsx",
+      "sourceMap": false
+    },
+    "include": [
+      "./src/**/*.ts",
+      "./src/**/*.js",
+      "./src/**/*.jsx",
+      "./src/**/*.tsx",
+      "./src/with-api/with-page-notify.tss",
+      "./src/router.tsx"
+    ]
+  }

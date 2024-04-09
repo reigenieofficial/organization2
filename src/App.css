@@ -1,0 +1,87 @@
+.App {
+  display: flex;
+  flex-direction: column; /* Change the direction to column */
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+
+.top-bar {
+
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+  /* Existing styles */
+  text-align: center; /* Center align the content */
+  padding: 10px; /* Add some padding */
+  background-color: #f8f9fa; /* Give it a distinct background color if needed */
+  border-bottom: 1px solid #ddd; /* Optionally add a border to the bottom */
+}
+
+.top-bar h3 {
+  margin: 0; /* Remove default margin from h3 */
+  color: #333; /* Set text color */
+  font-size: 1.5em; /* Set the size of the text */
+}
+
+/* Add this media query for desktop */
+@media (min-width: 769px) {
+  .top-bar {
+    text-align: left; /* Align the text to the left on desktop */
+    width: 100%; /* Set the width to 100% on desktop */
+  }
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9000; /* Above the LeadsPanel */
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show button on mobile */
+  }
+}
+
+.LeadsPanel 
+.ChatContainer {
+  width: 100%; /* Adjust the width as needed */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .LeadsPanel {
+  width: 80%;
+  }
+}
+
+/* Adjust other styles as needed */
+/* CSS for the scroll-to-top icon */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000; /* To ensure it stays above other elements */
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 24px;
+  transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3; /* Change color on hover */
+}
